@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#logo{
+    display: block;
+    margin:100px auto;
+    transition: transform 1.5s ease-in-out;
+    width: 200px;
+}
+#logo:hover{
+    transform: translate(120px, 90px);
+    transform: scale(2) perspective(2px);
+    transform: rotate(360deg);
+}
+#container {
+    width: 50vw;
+    height: 60vw;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+/* Make use of attribute selector:
+* = contain */
+/* img[src *="joel"] {
+    border-radius: 25%;
+} */
+#container figure {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    width: 300%;
+    background-color: rgba(168, 161, 15, 0.3);
+    animation: 4s slide infinite;
+}
+#container figure img {
+    width: 17%;
+    float: left;
+}
+/* Animation */
+@keyframes slide {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: -50%;
+    }
+    80%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+    /* from{
+        left: 0;
+    }
+    to{
+        left: -30%
+    } */
+}
